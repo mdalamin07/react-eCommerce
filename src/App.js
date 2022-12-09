@@ -10,12 +10,13 @@ import SingleProduct from "./SingleProduct";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   const theme = {
     colors: {
       text: "rgba(29, 29, 29, .8)",
-      while: "#ffffff",
+      white: "#ffffff",
       black: "#212529",
       helper: "#8490ff",
   
@@ -50,6 +51,7 @@ const App = () => {
           <Route path="/cart" element={<Cart/>} />
           <Route path="*" element={<ErrorPage/>} />
         </Routes>
+        <Footer/>
       </Router>
     </ThemeProvider>
   );
